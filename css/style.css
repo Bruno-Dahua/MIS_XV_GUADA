@@ -1904,7 +1904,7 @@ footer p {
   .hotels .list a {
     width: 100%;
   }
-  .gifts .card {
+  .gifts .card, .confirmation .card {
     width: calc(100% - 60px);
     padding: 60px 30px;
   }
