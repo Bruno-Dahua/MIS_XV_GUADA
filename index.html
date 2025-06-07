@@ -31,11 +31,11 @@
             h2,h3, .countdown .timer div, header h1{
                 font-family: "Poppins", sans-serif;            }
             header h1, .cover .text i, .timer div, .countdown p, .countdown a i, .events .item i, .social .item i, .video span, .gallery span, .hotels span, .hotels .list a i, .gifts i, .modalGift h3, .modalGift .item .right p b, .modalGift .item .right .list a h4, .modalGift .closeModal i, .invites i, .invites span, .confirmation .link i, .confirmation .modalGift .contenido-modal .form label, .confirmation .modalGift .contenido-modal span, .confirmation .modalGift .contenido-modal .thanks i, footer p i, .content .info .text i, .cover .text h1, .cover.full.design .text h2, .cover.design .text h2{
-                color: #DDC190;
+                color: dimgray;
             }
-            .story, .gifts a, .gifts button, .gifts, .confirmation, .confirmation .modalGift .contenido-modal .form .container .checkmark:after, .confirmation .modalGift .contenido-modal .form button, .salon .item .right a, .player .icon{
+            /* .story, .gifts a, .gifts button, .gifts, .confirmation, .confirmation .modalGift .contenido-modal .form .container .checkmark:after, .confirmation .modalGift .contenido-modal .form button, .salon .item .right a, .player .icon{
                 background-color: #DDC190;
-            }
+            } */
             .modalGift .contenido-modal .item .right .list a{
                 background-color: transparent;
             }
@@ -56,11 +56,13 @@
         <script src="./Felicitas_4_7/envelope.js.descargar"></script>     
         <span class="player" id="button">
             <div class="icon">
-                <img src="./img/pause.png">
+                <span class="player material-symbols-outlined" id="button">
+                volume_up
+                </span>
             </div>
         </span>
         <audio id="player" loop="">
-            <source src="images/musica.mp3" type="audio/mp3">
+            <source src="Felicitas_4_7/Taylor Swift - Anti-Hero (Official Music Video).mp4" type="audio/mp3">
         </audio>
         <button href="#myModal2" class="linkcontacto modal-button" style="background-color:lightgray; border:none; z-index:1000;">
             <span class="material-symbols-outlined">
@@ -130,6 +132,15 @@
                             <p style="font-size: 12px; text-transform: uppercase;">Julio</p>
                         </div>                                  
                     </div>
+                    <div>
+                        <div>
+                            <p style="font-size:18px;">
+                                <b>Dress Code</b>
+                            </p>
+                            <p>Elegante Sport</p>
+                        </div>
+                    </div>
+                    <br>
                     <div style="padding: 0 30px;">
                         <p style="font-size:18px;">
                             <b>Centro Naval</b>
@@ -142,8 +153,8 @@
 
             <!-- DRESS CODE -->                           
         </section>
-        <main style="background-image: url(img/fireworks.jpeg);">
-            <section class="story" style="background-image: url(img/fireworks.jpeg);">
+        <main style="background-image: url(img/fireworks.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
+            <section class="story">
                 <div class="image">
                     <img src="./img/felicitas.jpg" alt="">
                 </div>
@@ -151,17 +162,17 @@
         
             <section class="gifts">
                 <div class="card">
-                <span class="material-symbols-outlined">
-                featured_seasonal_and_gifts
-                </span> 
-                <h2>Regalos</h2>
+                    <span class="material-symbols-outlined">
+                    featured_seasonal_and_gifts
+                    </span> 
+                    <h2>Regalos</h2>
                     <p>Tu presencia es lo más importante para mi.<br>Si además quieres hacerme un regalo...</p>                
                     <button class="modal-button" href="#myModal1">Más información</button>                            
                 </div>
                 <div class="modalGift" id="myModal1">
                     <div class="contenido-modal">
                         <span class="closeModal">
-                            <i class="fa-regular fa-xmark"></i>
+                        <span class="material-symbols-outlined">close</span> 
                         </span>
                 
                         <!-- REGALO 1 -->
@@ -178,8 +189,9 @@
                                 <input type="text" value="0110418330041811943383" id="GfGInput">
                                 <p id="gfg" class="gfg"></p>
                                 <span onclick="GeeksForGeeks()" value="Copy">
-                                    <i class="fa-regular fa-copy"></i>
-                                    Copiar CBU
+                                    <span class="material-symbols-outlined">
+                                    content_copy
+                                    </span>
                                 </span>
                             </div>
                         </div>
@@ -189,80 +201,65 @@
                 </div>
             </section>
             <section class="confirmation">
-                <span class="material-symbols-outlined">
-                content_paste_go
-                </span>             
-                <span>rsvp</span>
-                <h2 style="max-width:790px;">Confirmación de Asistencia</h2>
-                <p style="max-width:790px;">Espero contar con tu presencia</p>
-                <p style="max-width:790px; margin-top:10px;">Por favor confirmar antes del 15/06/2025</p>            
-            
-                <!-- DETALLES EXTRA -->
-                <button class="link modal-button" href="#myModal2" style="padding:15px 32px;">
+                <div class="card">
                     <span class="material-symbols-outlined">
-                    check
-                    </span>Confirmar Asistencia
-                </button>
+                    content_paste_go
+                    </span>             
+                    <span>rsvp</span>
+                    <h2 style="max-width:790px;">Confirmación de Asistencia</h2>
+                    <p style="max-width:790px;">Espero contar con tu presencia</p>
+                    <p style="max-width:790px; margin-top:10px;">Por favor confirmar antes del 15/06/2025</p>            
+                
+                    <!-- DETALLES EXTRA -->
+                    <button class="link modal-button" href="#myModal2" style="padding:15px 32px;">
+                        <span class="material-symbols-outlined">
+                        check
+                        </span>Confirmar Asistencia
+                    </button>
+                </div>
                 <div class="modalGift" id="myModal2">
                     <div class="contenido-modal">
                         <span class="closeModal">
-                            <span class="material-symbols-outlined">
-                            close
-                            </span> 
-                    </span>
+                        <span class="material-symbols-outlined">close</span> 
+                        </span>
                         <div class="cont">
                             <span>rsvp</span>
                             <h2>Confirmación de Asistencia</h2>
-                            <p>El formulario es individual.<br> Si tu invitación incluye acompañantes repetí el proceso por cada persona.</p>
+                            <p>El formulario es individual. Si tu invitación incluye acompañantes, repetí el proceso por cada persona.</p>
+        
                             <div class="form">
-                                <div class="msj error" style="display:none">Por favor completa todos los campos</div>
-                                    <form method="post" action="_save.php" style="width:100%;">
-                                        <div class="radio">
-                                            <label class="container" style="font-weight:600;">Asistiré                                    <input type="radio" checked="checked" value="si" name="asistencia">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container" style="font-weight:600;">No Asistiré                                    <input type="radio" value="no" name="asistencia">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <input type="hidden" name="asiste" id="asiste" value="si">
-                        
-                                        <label>Apellido y Nombre</label>
-                                        <input type="text" name="nombre" id="nombre" value="">
-                                        <label>Nº de Documento DNI</label>
-                                        <input type="text" name="mail" id="mail">
-                                        <label></label>
-                                        <input type="hidden" name="telefono" id="telefono">
-                                        <label>¿Necesitas un menú especial?</label>
-                                        <div class="selectField">
-                                            <i class="fa-regular fa-angle-down"></i>
-                                            <select name="alimentos" id="alimentos" onchange="javacript: var typename = this.options[selectedIndex].text; document.getElementById('alimento').value = typename;">
-                                                <option value="Ninguno">Ninguno</option>                                    
-                                                <option value="Celíaco">Celíaco</option>                                    
-                                                <option value="Vegetariano">Vegetariano</option>                                    
-                                                <option value="Vegano">Vegano</option>                                    
-                                                <option value="Diabético">Diabético</option>
-                                            </select> 
-                                        </div>
-                                        <input type="hidden" name="alimento" id="alimento" value="Ninguna">
-                                        <input type="hidden" name="traslado" id="traslado" value="no">
-                        
-                                        <label></label>
-                                        <input type="hidden" name="nombre_a" id="nombre_a">
+                            <div class="msj error" style="display:none; color:red;">Por favor completá correctamente los campos obligatorios.</div>
+                                <form id="formAsistencia" style="width:100%;">
+                                    <div class="radio">
+                                        <label class="container" style="font-weight:600;">Asistiré
+                                            <input type="radio" checked value="si" name="asistencia">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container" style="font-weight:600;">No Asistiré
+                                            <input type="radio" value="no" name="asistencia">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
 
-                                        <label>Comentarios</label>
-                                        <input type="text" name="comentarios" id="comentarios">
+                                    <label>Apellido y Nombre *</label>
+                                    <input type="text" name="nombre" id="nombre" required>
 
-                                        <button class="submit" type="submit" name="save" style="color:#fff;">
-                                            <i class="fa-regular fa-check-circle" style="color:#fff;"></i>Confirmar Asistencia
-                                        </button>
-                                        <div id="data"></div>
-                                    </form>
-                                </div>
+                                    <label>Nº de Documento DNI *</label>
+                                    <input type="text" name="dni" id="dni" required>
+
+                                    <label>Comentarios (opcional)</label>
+                                    <input type="text" name="comentarios" id="comentarios">
+
+                                    <button class="submit" type="submit" style="color:#fff;">
+                                        <i class="fa-regular fa-check-circle" style="color:#fff;"></i> Confirmar Asistencia
+                                    </button>
+                                </form>
                             </div>
-                        <div class="thanks" style="display:none;">
-                            <i class="fa-thin fa-check-circle"></i>
-                            <h2>¡Gracias por confirmar tu asistencia!</h2>
+
+                            <div class="thanks" style="display:none;">
+                                <i class="fa-thin fa-check-circle"></i>
+                                <h2>¡Gracias por confirmar tu asistencia!</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -270,44 +267,38 @@
         </main>
         
         <footer>
-            <p>Hecho con <i class="fa-regular fa-heart"></i> por <a href="https://www.noscasamos.ar" target="_blank">NosCasamos.ar</a></p>
+            <p>Hecho con <span class="material-symbols-outlined">favorite</span></p>
         </footer>
 
         <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-        <script type="text/javascript">
-  $("input").change(function () {
-    $("#asiste").val($("input:checked").val());
-  });
+        <script>
+            $(function () {
+            $('#formAsistencia').submit(function (event) {
+            event.preventDefault();
 
-  $(function () {
-    $(".submit").click(function (event) {
-      var asiste = $("#asiste").val();
-      var alimento = $("#alimento").val();
-      var nombre = $("#nombre").val();
-      var nombre_a = $("#nombre_a").val();
-      var traslado = $("#traslado").val();
-      var mail = $("#mail").val();
-      var telefono = $("#telefono").val();
-      var comentarios = $("#comentarios").val();
+            const nombre = $('#nombre').val().trim();
+            const dni = $('#dni').val().trim();
+            const comentario = $('#comentarios').val().trim();
+            const asistencia = $('input[name="asistencia"]:checked').val();
 
-      if (nombre === '') {
-        $('.error').fadeOut(200).show();
-      } else {
-        // Crear mensaje de WhatsApp
-        var mensaje = `Hola! Soy ${nombre} y confirmo mi asistencia: ${asiste === "si" ? "√ Voy a ir" : "☓ No puedo ir"}%0A`;
-        mensaje += `Menú: ${alimento}%0A`;
-        if (comentarios) mensaje += `Comentario: ${comentarios}%0A`;
-        mensaje += `DNI: ${mail}%0A`;
+            const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$/;
+            const soloDni = /^\d{8}$/;
 
-        var numero = "5492932405452"; // Tu número de WhatsApp
-        var url = `https://wa.me/${numero}?text=${mensaje}`;
-        window.open(url, '_blank');
-      }
+            if (!nombre.match(soloLetras) || !dni.match(soloDni)) {
+                $('.error').fadeOut(200).fadeIn(200);
+                return;
+            }
 
-      event.preventDefault();
-    });
-  });
-</script>
+            let mensaje = `Hola! Soy ${nombre} y confirmo mi asistencia: ${asistencia === "si" ? "✅ Voy a ir" : "❌ No puedo ir"}%0A`;
+            if (comentario) mensaje += `Comentario: ${comentario}%0A`;
+                mensaje += `DNI: ${dni}`;
+
+                const numero = "5492932405452"; // Tu número de WhatsApp
+                const url = `https://wa.me/${numero}?text=${mensaje}`;
+                window.open(url, '_blank');
+                });
+            });
+        </script>
 
         <script src="../assets/js/modal.js"></script>
         <script src="../assets/js/lightbox.js"></script>
