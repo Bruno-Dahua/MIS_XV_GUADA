@@ -61,7 +61,7 @@
         <audio id="player" loop="">
             <source src="Felicitas_4_7/Taylor Swift - Anti-Hero (Official Music Video).mp4" type="audio/mp3">
         </audio>
-        <button href="#myModal2" class="linkcontacto modal-button" style="background-color:lightgray; border:none; z-index:1000;">
+        <button href="#myModal2" class="linkcontacto modal-button" style="background-color:dimgray; border:none; z-index:1000;">
             <span class="material-symbols-outlined">
             content_paste_go
             </span> 
@@ -97,7 +97,8 @@
         <section class="countdown" style="background-color: black;">
             <p>Agendá la fecha</p>
             <h2>4 de Julio</h2>
-            <div id="countdown" class="timer" data-init-value="7/4/2025 20:30:00">
+            <p style="font-size: 18px;">21:00 hs</p>
+            <div id="countdown" class="timer" data-init-value="7/4/2025 21:00:00">
                 <div>
                     <div id="days">0</div>
                     <span>Días</span>
@@ -156,18 +157,12 @@
                         <p>Base Naval Puerto Belgrano</p>
                     </div>
                 </div>
-                <a href="https://maps.app.goo.gl/K78ryFsymHVfCyeh9" target="_blank">Cómo llegar</a>
+                <a href="https://maps.app.goo.gl/K78ryFsymHVfCyeh9" target="_blank">¿Cómo llegar?</a>
             </article>
 
             <!-- DRESS CODE -->                           
         </section>
         <main style="background-image: url(img/fireworks.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
-            <section class="story">
-                <div class="image">
-                    <img src="./img/felicitas.jpg" alt="">
-                </div>
-            </section>
-        
             <section class="gifts">
                 <div class="card">
                     <span class="material-symbols-outlined">
@@ -180,7 +175,7 @@
                 <div class="modalGift" id="myModal1">
                     <div class="contenido-modal">
                         <span class="closeModal">
-                        <span class="material-symbols-outlined">close</span> 
+                        <span class="material-symbols-outlined close" style="color: dimgray;">close</span> 
                         </span>
                 
                         <!-- REGALO 1 -->
@@ -196,11 +191,9 @@
                                 <p><b>CBU:</b></p>
                                 <input type="text" value="0140414603620154858600" id="GfGInput">
                                 <p id="gfg" class="gfg"></p>
-                                <span onclick="GeeksForGeeks()" value="Copy">
-                                    <span class="material-symbols-outlined">
-                                    content_copy
-                                    </span>
-                                </span>
+                                <span class="material-symbols-outlined copy-icon" onclick="GeeksForGeeks()" value="Copy">
+                                content_copy
+                                </span>                               
                             </div>
                         </div>
                                     
@@ -299,11 +292,11 @@
                 return;
             }
 
-            let mensaje = `Hola! Soy ${nombre} y confirmo mi asistencia: ${asistencia === "si" ? "✅ Voy a ir" : "❌ No puedo ir"}%0A`;
+            let mensaje = `Hola! Soy ${nombre} y confirmo mi asistencia a los XV de Felicitas: ${asistencia === "si" ? "Voy a ir" : "No puedo ir"}%0A`;
             if (comentario) mensaje += `Comentario: ${comentario}%0A`;
                 mensaje += `DNI: ${dni}`;
 
-                const numero = "5492932405452"; // Tu número de WhatsApp
+                const numero = "5492932553274"; // Tu número de WhatsApp
                 const url = `https://wa.me/${numero}?text=${mensaje}`;
                 window.open(url, '_blank');
                 });
