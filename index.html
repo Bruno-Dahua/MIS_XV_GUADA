@@ -25,12 +25,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
         
         <style>
-            body, header{
-                background-color: #F9F5EF;
-            }
             h2,h3, .countdown .timer div, header h1{
                 font-family: "Poppins", sans-serif;            }
-            header h1, .cover .text i, .timer div, .countdown p, .countdown a i, .events .item i, .social .item i, .video span, .gallery span, .hotels span, .hotels .list a i, .gifts i, .modalGift h3, .modalGift .item .right p b, .modalGift .item .right .list a h4, .modalGift .closeModal i, .invites i, .invites span, .confirmation .link i, .confirmation .modalGift .contenido-modal .form label, .confirmation .modalGift .contenido-modal span, .confirmation .modalGift .contenido-modal .thanks i, footer p i, .content .info .text i, .cover .text h1, .cover.full.design .text h2, .cover.design .text h2{
+            header h1, .cover .text i, .timer div, .countdown p, .countdown a i, .events .item i, .social .item i, .video span, .gallery span, .hotels span, .hotels .list a i, .gifts i, .modalGift h3, .modalGift .item .right p b, .modalGift .item .right .list a h4, .modalGift .closeModal i, .invites i, .invites span, .confirmation .link i, .confirmation .modalGift .contenido-modal .form label, .confirmation .modalGift .contenido-modal .thanks i, footer p i, .content .info .text i, .cover .text h1, .cover.full.design .text h2, .cover.design .text h2{
                 color: dimgray;
             }
             /* .story, .gifts a, .gifts button, .gifts, .confirmation, .confirmation .modalGift .contenido-modal .form .container .checkmark:after, .confirmation .modalGift .contenido-modal .form button, .salon .item .right a, .player .icon{
@@ -47,7 +44,7 @@
 
         <div class="intro" id="intro">
             <div class="top" id="top">
-                <div class="badge" onclick="animar();"><img src="./img/sello.png"></div>
+                <div class="badge" onclick="animar();"><img src="./img/image.png" style="border-radius: 140px;"></div>
                 <img src="./img/envelopet.png" class="top hiddenM">
                 <img src="./img/envelopetm.png" class="top hiddenL">
             </div>
@@ -74,19 +71,30 @@
                 <h1>Felicitas</h1>
                 <h2>¡Cumplo XV!</h2>
                 <p>y quiero compartirlo con vos.</p>
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined flecha" id="bajar" >
                 arrow_downward
                 </span>
 
             </div>
+            <script>
+                const flecha = document.getElementById('bajar');
+
+                flecha.addEventListener('click', () => {
+                // Scroll vertical hacia abajo una pantalla (altura del viewport)
+                window.scrollBy({
+                    top: window.innerHeight,
+                    behavior: 'smooth' // para que haga scroll suave
+                });
+                });
+            </script>
             <div>
                 <div class="image">
-                    <img src="./img/image.png">
+                    <img src="./img/esfera.png">
                 </div>
             </div>
         </section>
         <script src="./Felicitas_4_7/slider.js.descargar"></script>
-        <section class="countdown" >
+        <section class="countdown" style="background-color: black;">
             <p>Agendá la fecha</p>
             <h2>4 de Julio</h2>
             <div id="countdown" class="timer" data-init-value="7/4/2025 20:30:00">
@@ -118,7 +126,7 @@
         </section>
         <script src="./Felicitas_4_7/countdown.js.descargar"></script>
 
-        <section class="events" style="background-repeat:repeat-x;">      
+        <section class="events" style="background-color: black; background-repeat:repeat-x;">      
             <!-- FIESTA -->         
             <article class="item">
                 <span class="material-symbols-outlined">
@@ -181,12 +189,12 @@
                                 <h3>Cuenta en Pesos</h3>
                             </div>
                             <div class="right">
-                                <p>Banco de la Nacion Argentina<br>
-                                    <b>Titular:</b>Diaz Jonatan Esteban<br>CUIT/CUIL 20351623242
-                                    <b>Alias:</b>Casamiento.jye
+                                <p>Banco de la Provincia de Buenos Aires<br>
+                                    <b>Titular:</b>Felicitas Gonzalez Morcillo<br>CUIT/CUIL 27-50503254-9
+                                    <b>Alias:</b>felicitasgonzalez.44
                                 </p>
                                 <p><b>CBU:</b></p>
-                                <input type="text" value="0110418330041811943383" id="GfGInput">
+                                <input type="text" value="0140414603620154858600" id="GfGInput">
                                 <p id="gfg" class="gfg"></p>
                                 <span onclick="GeeksForGeeks()" value="Copy">
                                     <span class="material-symbols-outlined">
@@ -251,7 +259,9 @@
                                     <input type="text" name="comentarios" id="comentarios">
 
                                     <button class="submit" type="submit" style="color:#fff;">
-                                        <i class="fa-regular fa-check-circle" style="color:#fff;"></i> Confirmar Asistencia
+                                        <span class="material-symbols-outlined">
+                                        check
+                                        </span>Confirmar Asistencia
                                     </button>
                                 </form>
                             </div>
@@ -311,7 +321,7 @@
                 document.execCommand("copy");
 
                 document.getElementById("gfg")
-                        .innerHTML = "<i class='fa fa-circle-check'></i> Copiado en portapapeles!";
+                        .innerHTML = "<span class='material-symbols-outlined'>check</span> ¡Copiado en portapapeles!";
             }
 
             var button = document.getElementById("button");

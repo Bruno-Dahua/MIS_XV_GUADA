@@ -598,6 +598,9 @@ header h1 {
   transform: translateY(1);
   opacity: 1;
 }
+.flecha {
+  cursor: pointer;
+}
 @media (prefers-reduced-motion: no-preference) {
   .cover .text .replace {
     animation: fade-in 1.5s ease-out infinite;
@@ -1908,9 +1911,6 @@ footer p {
     width: calc(100% - 60px);
     padding: 60px 30px;
   }
-  .confirmation {
-    padding: 150px 30px;
-  }
   .confirmation .value {
     min-width: 100%;
   }
@@ -2094,12 +2094,9 @@ footer p {
   .hotels .list a {
     width: 100%;
   }
-  .gifts .card {
+  .gifts .card, .confirmation .card {
     width: calc(100% - 60px);
     padding: 60px 30px;
-  }
-  .confirmation {
-    padding: 150px 30px;
   }
   .confirmation .value {
     min-width: 100%;
