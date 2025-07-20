@@ -3,8 +3,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta property="og:title" content="Guada - 13 de Septiembre">
-        <meta property="og:description" content="¡Estás invitado a celebrar junto a Guada! Confirmá tu asistencia.">
+        <meta property="og:title" content="Guadalupe">
+        <meta property="og:description" content="¡Estás invitado a celebrar junto a Guadalupe! Confirmá tu asistencia.">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://mis-xv-guada.netlify.app/image.png">
         <meta property="og:url" content="https://mis-xv-guada.netlify.app/">
@@ -98,7 +98,7 @@
         </section>
         <section class="countdown" style="background-color: black;">
             <p>Agendá la fecha</p>
-            <h2>13 de Septiembre<h2>
+            <h2><strong>13 de Septiembre</strong><h2>
             <p style="font-size: 18px;">21:30 hs</p>
             <div id="countdown" class="timer" data-init-value="9/13/2025 21:30:00">
                 <div>
@@ -139,8 +139,8 @@
                 <div>
                     <div style="display:flex; align-items:center; justify-content:center; gap:20px; padding: 0 50px;  border-bottom: 1px solid rgba(135, 135, 135, 0.2); margin-bottom:15px; padding-bottom:15px;">
                         <div style="display:flex; align-items: center; justify-content: center; flex-direction: column; gap:0px;">
-                            <p style="font-size: 26px; line-height: 30px;">13</p>
-                            <p style="font-size: 12px; text-transform: uppercase;">Septiembre</p>
+                            <p style="font-size: 26px; line-height: 30px;"><strong>13</strong></p>
+                            <p style="font-size: 12px; text-transform: uppercase;"><strong></strong>Septiembre</strong></p>
                         </div>                                  
                     </div>
                     <div>
@@ -193,7 +193,7 @@
                             <p>Por favor, completa los datos y envia el formulario por WhatsApp.</p>
         
                             <div class="form">
-                            <div class="msj error" style="display:none; color:red;">Por favor completá correctamente los campos obligatorios.</div>
+                            <div class="msj error" style="display:none; color:black;"><strong>Por favor, completá correctamente los campos obligatorios.</strong></div>
                                 <form id="formAsistencia" style="width:100%;">
                                     <label>Cantidad de personas *</label>
                                     <select id="cantidad" required>
@@ -317,13 +317,16 @@
                     const nombre = $(`input[name="nombre${i}"]`).val()?.trim();
                     const comentario = $(`input[name="comentario${i}"]`).val()?.trim();
 
-                    if (!nombre || !comentario || !nombre.match(soloLetras)) {
+                    if (!nombre || !nombre.match(soloLetras) || nombre.trim().split(" ").length < 2) {
                         $('.error').fadeOut(200).fadeIn(200);
                         return;
                     }
 
-                    mensaje += `- ${nombre}%0A  Comentario: ${comentario}%0A`;
-                    }
+                    mensaje += `- ${nombre}%0A`;
+                    if (comentario) {
+                    mensaje += `  Comentario: ${comentario}%0A`;
+                    }  
+                }
 
                     mensaje += `Y confirmamos nuestra asistencia al cumpleaños de Guada.`;
                 }
