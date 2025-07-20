@@ -656,7 +656,6 @@ header h1 {
 
   background-color: rgba(0, 0, 0, 0.9); /* negro semitransparente */
   padding: 20px;
-  border-radius: 10px;
 }
 .cover.full .text h1 {
   font-size: 100px;
@@ -1303,7 +1302,7 @@ header h1 {
   background-position: center;
 }
 .gifts .card, .confirmation .card {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.73);
   -webkit-border-top-left-radius: 6px;
   -moz-border-top-left-radius: 6px;
   border-top-left-radius: 6px;
@@ -1412,7 +1411,7 @@ header h1 {
 .confirmation h2 {
   font-size: 32px;
   font-weight: 200;
-  color: dimgray;
+  color: black;
   max-width: 790px;
 }
 .confirmation span {
@@ -1421,7 +1420,7 @@ header h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 5px;
-  color: dimgray;
+  color: black;
 }
 
 .confirmation button span {
@@ -1429,7 +1428,7 @@ header h1 {
 }
 .confirmation p {
   font-size: 16px;
-  color: dimgray;
+  color: black;
   max-width: 790px;
 }
 .confirmation .value {
