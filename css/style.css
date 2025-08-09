@@ -2303,3 +2303,68 @@ footer p {
   font-size: 20px;
   line-height: 1;
 }
+
+main {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Fondo difuminado */
+    .blur-bg {
+        background: url('https://www.lopezlinaresvintagejewelry.com/wp-content/uploads/2022/11/vintage-by-lopez-linares-tiara-novia-plata-mantilla-3.jpg') no-repeat center center fixed;
+        background-size: cover;
+        filter: blur(20px);
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 0;
+    }
+
+    /* Imagen principal */
+    .main-img {
+        position: absolute;
+        top: 0; left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 100%;
+        background: url('https://www.lopezlinaresvintagejewelry.com/wp-content/uploads/2022/11/vintage-by-lopez-linares-tiara-novia-plata-mantilla-3.jpg') no-repeat center top;
+        background-size: contain;
+        border-radius: 30px;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    /* Contenido */
+    .confirmation {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: black;
+    }
+
+    /* Ajustes para pantallas más angostas */
+    @media (max-width: 768px) {
+        .blur-bg {
+            filter: blur(8px); /* Menos difuminado */
+        }
+        .main-img {
+            height: auto;
+            aspect-ratio: 3 / 4;
+            background-position: center center;
+            background-size: cover; /* Ocupar más espacio */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .blur-bg {
+            filter: none; /* Sin difuminado */
+        }
+        .main-img {
+            width: 100%;
+            aspect-ratio: auto;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 0; /* Sin bordes para aprovechar espacio */
+        }
+    }
