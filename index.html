@@ -164,25 +164,44 @@
 
             <!-- DRESS CODE -->                           
         </section>
-        <main style="background-image: url(https://www.lopezlinaresvintagejewelry.com/wp-content/uploads/2022/11/vintage-by-lopez-linares-tiara-novia-plata-mantilla-3.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
-            <section class="confirmation">
-                <div class="card">
-                    <span class="material-symbols-outlined">
-                    content_paste_go
-                    </span>             
-                    <span>rsvp</span>
-                    <h2 style="max-width:790px;">Confirmación de Asistencia</h2>
-                    <p style="max-width:790px;">Espero contar con tu presencia</p>
-                    <p style="max-width:790px; margin-top:10px;">Por favor, confirmar antes del 01/09/2025</p>            
-                
-                    <!-- DETALLES EXTRA -->
-                    <button class="link modal-button" href="#myModal2" style="padding:15px 32px;">
-                        <span class="material-symbols-outlined">
-                        check
-                        </span>Confirmar Asistencia
-                    </button>
-                </div>
-                <div class="modalGift" id="myModal2">
+        <main style="position: relative; height: 100vh; overflow: hidden;">
+    <!-- Fondo difuminado para evitar franjas blancas -->
+    <div style="
+        background: url('https://www.lopezlinaresvintagejewelry.com/wp-content/uploads/2022/11/vintage-by-lopez-linares-tiara-novia-plata-mantilla-3.jpg') no-repeat center center fixed;
+        background-size: cover;
+        filter: blur(20px);
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 0;
+    "></div>
+
+    <!-- Imagen principal siempre entera -->
+    <div style="
+        background: url('https://www.lopezlinaresvintagejewelry.com/wp-content/uploads/2022/11/vintage-by-lopez-linares-tiara-novia-plata-mantilla-3.jpg') no-repeat center top fixed;
+        background-size: contain;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 1;
+    "></div>
+
+    <!-- Contenido -->
+    <section class="confirmation" style="position: relative; z-index: 2; text-align: center; color: black;">
+        <div class="card">
+            <span class="material-symbols-outlined">content_paste_go</span>
+            <span>rsvp</span>
+            <h2 style="max-width:790px;">Confirmación de Asistencia</h2>
+            <p style="max-width:790px;">Espero contar con tu presencia</p>
+            <p style="max-width:790px; margin-top:10px;">Por favor, confirmar antes del 01/09/2025</p>            
+
+            <!-- Botón -->
+            <button class="link modal-button" href="#myModal2" style="padding:15px 32px;">
+                <span class="material-symbols-outlined">check</span>Confirmar Asistencia
+            </button>
+        </div>
+    </section>
+        <div class="modalGift" id="myModal2">
                     <div class="contenido-modal">
                         <span class="closeModal">
                         <span class="material-symbols-outlined">close</span> 
